@@ -1,0 +1,35 @@
+{
+  "applicationId": "js.neutralino.zero",
+  "version": "1.0.0",
+  "defaultMode": "window",
+  "documentRoot": "/app/dist/",
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "nativeAllowList": ["app.*", "filesystem.readDirectory"],
+  "modes": {
+    "window": {
+      "title": "chocovim",
+      "width": 800,
+      "height": 500,
+      "minWidth": 400,
+      "minHeight": 200,
+      "icon": "/app/src/assets/react.svg"
+    }
+  },
+  "cli": {
+    "binaryName": "chocovim",
+    "resourcesPath": "/app/dist/",
+    "extensionsPath": "/extensions/",
+    "binaryVersion": "5.3.0",
+    "clientVersion": "5.3.0",
+    "frontendLibrary": {
+      "patchFile": "/app/index.html",
+      "devUrl": "http://localhost:5173",
+      "projectPath": "/app",
+      "initCommand": "bun install",
+      "devCommand": "BROWSER=none bun run dev",
+      "buildCommand": "bun run build"
+    }
+  }
+}
